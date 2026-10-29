@@ -1,0 +1,18 @@
+# macOS and editor files
+.DS_Store
+._*
+*.swp
+*.swo
+
+# Local Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local secrets; keep bundled environment examples versioned
+.env
+.env.*
+!.env*.example
