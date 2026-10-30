@@ -13,6 +13,11 @@ instructions and applicable instruction hierarchy when resolving conflicts.
 Do not weaken verification merely to make an implementation pass; report checks
 performed and any gaps.
 
+Follow the development skill's Git workflow: define coherent commit boundaries,
+commit verified increments by default, review the staged diff, reassess oversized
+changes, and report commit IDs and remaining work. Honour user Git instructions;
+pushing and merging require explicit requests.
+
 Maintain both skills and bootstrap resources in sync with the sibling
 `wagtail-ai-humans` repository as described in [README.md](README.md). Preserve
 independent edits. Keep the development skill's bundled bootstrap copy in sync
