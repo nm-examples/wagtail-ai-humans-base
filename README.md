@@ -6,17 +6,11 @@ This repository carries two reusable skills:
   Wagtail sites using uv, Docker, PostgreSQL, and just, with a fresh dependency
   resolution and lockfile for each site.
 - [`wagtail-development`](.agents/skills/wagtail-development/SKILL.md) guides
-  ongoing application work through focused increments, meaningful verification,
-  and clear code review.
+  ongoing application work and owns the shared development, Git, and pull-request
+  rules.
 
 [AGENTS.md](AGENTS.md) describes how to maintain these resources in this base
 repository, which has no runnable application of its own.
-
-The development workflow defines commit boundaries, commits verified increments
-locally by default, reviews staged changes, reassesses oversized commits, and
-reports commit IDs and remaining work. User Git instructions take precedence;
-pushing and merging require explicit requests. These are workflow instructions,
-with no Git hooks, CI enforcement, or numerical commit-size limits added.
 
 The matching working copy is maintained in the sibling `wagtail-ai-humans`
 repository. Updates to both skills are mirrored between these repositories,

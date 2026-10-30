@@ -1,25 +1,14 @@
 # Base repository development requirements
 
 This repository stores reusable skills and templates, not a runnable Django
-application. Use [the development skill](.agents/skills/wagtail-development/SKILL.md)
+application. Read and follow
+[the development skill](.agents/skills/wagtail-development/SKILL.md)
 for planning, changes, and review, applying verification to the affected skills
 and templates. Do not attempt application commands at this repository root.
-Use `wagtail-bootstrap` when asked to create a separate new site.
+This is required even when another skill provides technical guidance. The
+development skill owns the shared scope, verification, Git, and pull-request rules.
 
-Keep changes focused and reviewable, establish expected outcomes before editing,
-and explain when a plan should be split. Other skills may supplement this
-workflow but must not silently replace it or expand scope. Follow the user's
-instructions and applicable instruction hierarchy when resolving conflicts.
-Do not weaken verification merely to make an implementation pass; report checks
-performed and any gaps.
-
-Follow the development skill's Git workflow: define coherent commit boundaries,
-commit verified increments by default, review the staged diff, reassess oversized
-changes, and report commit IDs and remaining work. Honour user Git instructions;
-pushing and merging require explicit requests.
-
-Maintain both skills and bootstrap resources in sync with the sibling
-`wagtail-ai-humans` repository as described in [README.md](README.md). Preserve
-independent edits. Keep the development skill's bundled bootstrap copy in sync
-with its repository copy. Generated projects receive the bundled project
-`AGENTS.md`, not this base-specific file or sibling-mirroring requirements.
+For creating a separate new site, use the
+[bootstrap skill](.agents/skills/wagtail-bootstrap/SKILL.md).
+When changing either repository skill, follow the copy and mirroring instructions
+in [README.md](README.md).

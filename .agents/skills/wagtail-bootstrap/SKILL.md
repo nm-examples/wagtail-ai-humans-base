@@ -27,7 +27,11 @@ an external reference checkout.
 1. Inspect the destination and applicable repository instructions. Proceed in
    an empty project directory, allowing an existing Git repository. Do not
    overwrite existing application files or reset databases. Surface actual
-   conflicts before continuing with dependent work.
+   conflicts before continuing with dependent work. Read the bundled
+   [development skill](assets/templates/.agents/skills/wagtail-development/SKILL.md)
+   and apply its Git and pull-request workflow to bootstrap work. When the
+   destination is its own Git repository, follow its branch workflow before
+   generating files.
 2. Run `uv init --bare --python <version>` and `uv python pin <version>`, then
    `uv add wagtail` and `uv run wagtail start config .` in the destination.
 3. Add `gunicorn`, `psycopg[binary]>=3.2,<4`, and `whitenoise` with uv. Review
@@ -76,12 +80,6 @@ validation that could not run, such as Docker checks without an available daemon
 
 Leave production credentials unset and explain that HTTPS, upload delivery,
 email, and backups are completed for the chosen host. Production support here
-does not authorize deployment. Follow the bundled
-[development skill's Git workflow](assets/templates/.agents/skills/wagtail-development/SKILL.md#git-workflow):
-treat the validated bootstrap as one coherent increment and commit it locally
-when the destination is its own Git repository, unless the user requests otherwise.
-Review the staged diff and include the generated lockfile and project guidance.
-If the destination is not its own Git repository, report that no commit was made;
-do not commit into an enclosing source repository. Report the commit ID and any
-remaining work. Pushing and merging require explicit requests. Keep existing data
-and unrelated services intact.
+does not authorize deployment. Treat the validated bootstrap as one coherent
+increment for review, including the generated lockfile and project guidance.
+Keep existing data and unrelated services intact.

@@ -8,16 +8,10 @@ in `pyproject.toml` and `uv.lock`.
 
 [AGENTS.md](AGENTS.md) directs application work to the repository-local
 [`wagtail-development` skill](.agents/skills/wagtail-development/SKILL.md).
-It covers focused scope, meaningful verification, and clear code review. Invoke
-it explicitly with `$wagtail-development`. Both the instructions and skill are
+The skill owns the shared development, Git, and pull-request rules. Invoke it
+explicitly with `$wagtail-development`. Both the instructions and skill are
 included in this project; no source checkout or user-level installation is needed.
 They can evolve with this site's own requirements.
-
-The workflow defines commit boundaries, commits verified increments locally by
-default, reviews staged changes, reassesses oversized commits, and reports commit
-IDs and remaining work. User Git instructions take precedence; pushing and merging
-require explicit requests. No Git hooks, CI enforcement, or numerical commit-size
-limits are included in this starter.
 
 ## Local development
 
