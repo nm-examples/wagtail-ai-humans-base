@@ -8,6 +8,10 @@ and templates. Do not attempt application commands at this repository root.
 This is required even when another skill provides technical guidance. The
 development skill owns the shared scope, verification, Git, and pull-request rules.
 
+For requested code reviews or an agreed review step, also follow
+[the code review skill](.agents/skills/ai-humans-code-review/SKILL.md)
+for review priorities, evidence, and findings.
+
 Use relevant local technical guidance when maintaining Wagtail templates:
 
 - [Content modeling](.agents/skills/wagtail-content-modeling/SKILL.md): page types,

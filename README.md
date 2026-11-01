@@ -1,6 +1,6 @@
 # Wagtail AI Humans Base
 
-This repository carries seven reusable skills. Two define the project workflow:
+This repository carries eight reusable skills. Three support the project workflow:
 
 - [`ai-humans-bootstrap`](.agents/skills/ai-humans-bootstrap/SKILL.md) creates new
   Wagtail sites using uv, Docker, PostgreSQL, and just, with a fresh dependency
@@ -8,6 +8,10 @@ This repository carries seven reusable skills. Two define the project workflow:
 - [`ai-humans-development`](.agents/skills/ai-humans-development/SKILL.md) guides
   ongoing application work and owns the shared development, Git, and pull-request
   rules.
+- [`ai-humans-code-review`](.agents/skills/ai-humans-code-review/SKILL.md) reviews
+  current changes or a requested area for actionable findings, using evidence and
+  consistent severity. Invoke it with `$ai-humans-code-review`; it supplements the
+  development workflow and loads relevant technical guidance.
 
 Five imported skills supplement that workflow:
 
@@ -29,11 +33,12 @@ material, and update process are recorded in
 repository, which has no runnable application of its own.
 
 The matching working copy is maintained in the sibling `wagtail-ai-humans`
-repository. Updates to all seven skills are mirrored between these repositories,
+repository. Updates to all eight skills are mirrored between these repositories,
 including instructions, templates, references, UI metadata, and resource additions
 or removals. Preserve independent edits in either checkout. When changing
-`ai-humans-development` or an imported technical skill, also update its bundled
-directory under `.agents/skills/ai-humans-bootstrap/assets/templates/.agents/skills/`
+`ai-humans-development`, `ai-humans-code-review`, or an imported technical skill,
+also update its bundled directory under
+`.agents/skills/ai-humans-bootstrap/assets/templates/.agents/skills/`
 and mirror the bootstrap skill as well. Keep provenance and licence material
 current in both repositories and their templates. Source-maintenance provenance
 notes describe mirroring; the bundled notes are standalone for generated sites.
@@ -48,9 +53,9 @@ $ai-humans-bootstrap Create a site at ../my-new-site named "My New Site".
 This repository stores the skill; generated applications, lockfiles, database
 contents, uploads, and production secrets belong to the destination project.
 
-Each generated site receives its own `AGENTS.md`, `ai-humans-development` with
-its UI metadata, and the five technical skills, including their provenance and
-licence material, from the bootstrap templates. These six skills work without
-either source repository or a user-level skill installation and can evolve with
-the new codebase. Source-specific mirroring instructions and the bootstrap skill
-itself are not copied into generated sites.
+Each generated site receives its own `AGENTS.md`, `ai-humans-development` and
+`ai-humans-code-review` with their UI metadata, and the five technical skills,
+including their provenance and licence material, from the bootstrap templates.
+These seven skills work without either source repository or a user-level skill
+installation and can evolve with the new codebase. Source-specific mirroring
+instructions and the bootstrap skill itself are not copied into generated sites.
