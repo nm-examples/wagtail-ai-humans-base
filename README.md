@@ -43,15 +43,26 @@ and mirror the bootstrap skill as well. Keep provenance and licence material
 current in both repositories and their templates. Source-maintenance provenance
 notes describe mirroring; the bundled notes are standalone for generated sites.
 
-Invoke the repository-local skill from this checkout and provide a destination
-for a separate new project, for example:
+## Create a site
 
-```text
-$ai-humans-bootstrap Create a site at ../my-new-site named "My New Site".
-```
+From this checkout, invoke the repository-local skill and choose a destination.
 
-This repository stores the skill; generated applications, lockfiles, database
-contents, uploads, and production secrets belong to the destination project.
+1. To create a separate project next to this checkout, use a relative path.
+
+   ```text
+   $ai-humans-bootstrap Create a site at ../my-new-site named "My New Site".
+   ```
+
+2. To turn a fresh clone of this base repository into the project, run the
+   skill from inside the clone and use `.` for the current directory. This
+   replaces the base setup files with the new site's files and keeps Git history.
+
+   ```text
+   $ai-humans-bootstrap Create a site at . named "My New Site".
+   ```
+
+Both options use host port 8000. If a container already publishes that port,
+the skill will ask you to stop it and wait for the port to become available.
 
 Each generated site receives its own `AGENTS.md`, `ai-humans-development` and
 `ai-humans-code-review` with their UI metadata, and the five technical skills,
